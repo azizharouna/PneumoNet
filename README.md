@@ -6,7 +6,7 @@ PneumoNet is a deep learning project aimed at detecting pneumonia in chest X-ray
 
 - [Introduction](#introduction)
 - [Project Structure](#project-structure)
-- [Installation](#installation)
+- [Google Colab Setup](#google-colab-setup)
 - [Dataset](#dataset)
 - [Usage](#usage)
   - [Data Preprocessing](#data-preprocessing)
@@ -23,7 +23,7 @@ Pneumonia is a serious respiratory infection, and early detection is crucial for
 
 ## Project Structure
 
-```
+```plaintext
 PneumoNet/
 ├── data/
 │   ├── raw/
@@ -56,26 +56,12 @@ PneumoNet/
 └── setup.py
 ```
 
-## Installation
+## Google Colab Setup
 
-To get started with PneumoNet, follow these steps:
+Given the large dataset size (~2 GB), it is recommended to use Google Colab for running the notebooks. Colab provides free compute resources and sufficient storage to handle the dataset.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/azizharouna/PneumoNet.git
-   cd PneumoNet
-   ```
-
-2. **Install dependencies:**
-   Create a virtual environment and install the required packages:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   pip install -r requirements.txt
-   ```
-
-3. **Download the dataset:**
-   Follow the instructions in the `data/README.md` to download and prepare the dataset.
+**Download the Dataset:**
+   - Use the provided `download_data.py` script or Kaggle API to download the dataset directly into Colab's environment or your Google Drive.
 
 ## Dataset
 
@@ -83,7 +69,7 @@ The dataset used in this project is the [Chest X-Ray Images (Pneumonia)](https:/
 
 ### Dataset Structure:
 
-```
+```plaintext
 data/
 ├── raw/                # Original dataset files
 ├── processed/          # Preprocessed data (train, validation, and test sets)
@@ -95,28 +81,23 @@ data/
 ### Data Preprocessing
 
 1. **Preprocess the data:**
-   Run the `01_data_preprocessing.ipynb` notebook to load, explore, and preprocess the dataset, including data augmentation techniques.
+   Run the `01_data_preprocessing.ipynb` notebook in Google Colab to load, explore, and preprocess the dataset, including data augmentation techniques.
 
 2. **Split the data:**
-   The notebook splits the data into training, validation, and test sets, and stores the processed data in the `data/processed/` directory.
+   The notebook splits the data into training, validation, and test sets, and stores the processed data in the `data/processed/` directory or Google Drive.
 
 ### Model Training
 
 1. **Train the model:**
-   Open and run the `02_model_training.ipynb` notebook to design the CNN architecture, set up the training loop, and train the model on the preprocessed dataset.
+   Open and run the `02_model_training.ipynb` notebook in Google Colab to design the CNN architecture, set up the training loop, and train the model on the preprocessed dataset.
 
 2. **Save the model:**
-   The trained model will be saved in the `models/` directory for later evaluation and deployment.
+   The trained model can be saved in your Google Drive for later evaluation and re-deployment.
 
 ### Model Evaluation
 
 1. **Evaluate the model:**
    Use the `03_model_evaluation.ipynb` notebook to evaluate the model's performance on the test set using metrics such as accuracy, precision, recall, and F1-score.
-
-### Model Deployment
-
-1. **Deploy the model:**
-
 
 ## Results
 
