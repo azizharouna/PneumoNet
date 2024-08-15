@@ -25,6 +25,8 @@ This dataset is suitable for various tasks related to chest X-ray image analysis
 - **Image Classification:** Developing models to identify different lung conditions based on X-ray images.
 - **Medical Image Analysis:** Researching and developing new techniques for analyzing medical images.
 
+For this project we are working on Pneumonia Dection.
+
 ## Example Code
 
 The provided Python code demonstrates how to:
